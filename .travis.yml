@@ -10,6 +10,9 @@ install:
   - npm install mocha-lcov-reporter --save
   - npm install --save-dev nyc
 
+before_script:
+  - npm rebuild
+
 script:
   - npm run test
   - npx nyc report --reporter=lcov
