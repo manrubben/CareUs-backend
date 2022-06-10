@@ -20,8 +20,6 @@ after_success:
 branches:
   only:
     - main
-    - develop
-    - Travis-config
 
 before_deploy:
   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.10.0
