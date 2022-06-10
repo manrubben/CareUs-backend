@@ -21,7 +21,8 @@ after_success:
   - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/*.info
 
 branches:
-  - main
+  only:
+    - main
 
 before_deploy:
   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.10.0
@@ -29,5 +30,8 @@ before_deploy:
 deploy:
   provider: heroku
   api_key: 8bf4d2a1-c139-4036-89c9-32361fdf8f4d
+  on:
+    branch: main
   app:
     Travis-config: careus-backend
+
