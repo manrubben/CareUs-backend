@@ -5,7 +5,7 @@ node_js:
 services:
   - mysql
 install:
-  - cd server && npm install
+  - npm install
   - npm install codacy-coverage --save
   - npm install mocha-lcov-reporter --save
   - npm install --save-dev nyc
