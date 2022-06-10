@@ -21,8 +21,7 @@ after_success:
   - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/*.info
 
 branches:
-  only:
-    - main
+  - main
 
 before_deploy:
   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.10.0
