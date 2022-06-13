@@ -16,9 +16,6 @@ module.exports = (sequelize, DataTypes) => {
         AuxiliaresRegistros.belongsTo(models.RegistrosDiarios, {
             foreignKey: 'registroId'
         });
-        AuxiliaresRegistros.belongsTo(models.Users, {
-            foreignKey: 'auxiliarId'
-        });
     }
     return AuxiliaresRegistros;
 
